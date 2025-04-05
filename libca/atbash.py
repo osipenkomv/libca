@@ -11,3 +11,9 @@ def atbash(text:str)->str:
     for letter in text:
         ciphertext += RU32[31-RU32.index(letter)]
     return ciphertext
+
+def un_atbash(ciphertext:str)->str:
+    text = str()
+    for letter in ciphertext:
+        text += RU32[31-RU32.index(letter)]
+    return text
